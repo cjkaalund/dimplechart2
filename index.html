@@ -85,7 +85,7 @@
 		debugger;
 // Legend title
 		svg.selectAll("title_text")
-			.data(["Click legend to select one carrier","CTRL-click to select more than one"])
+			.data(["Click legend to select one carrier","SHIFT-click to select more than one"])
 			.enter()
 			.append("text")
 				.attr("x", margin.left + chartSize.width + 10)
@@ -105,7 +105,7 @@
 				var new_reason_list = [];
 				var single_selected = true;
 				
-				if (d3.event.metaKey) { // If ctrl/cmd key held down, more than one carrier can be selected
+				if (d3.event.shiftKey) { // If shift key held down, more than one carrier can be selected
 					single_selected = false;
 				};
 				
